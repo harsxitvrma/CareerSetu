@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerSetu - Dashboard</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CareerSetu</div>
+        <div class="user-profile-menu">
+            <div class="profile-icon" id="profile-icon">
+                <img src="assets/profile_icon.png" alt="User Profile" id="profile-pic">
+                <p class="user-short-name" id="user-short-name"></p>
+            </div>
+            <div class="dropdown-content hidden" id="profile-dropdown">
+                <div class="profile-info">
+                    <h4 id="profile-name"></h4>
+                    <p id="profile-email"></p>
+                </div>
+                <hr>
+                <div class="quiz-info-section">
+                    <h4>Your Profile Description</h4>
+                    <p><strong>Education Level:</strong> <span id="edu-level-info"></span></p>
+                    <p><strong>Board:</strong> <span id="edu-board-info"></span></p>
+                    <p><strong>Interests:</strong> <span id="interests-info"></span></p>
+                </div>
+                <hr>
+                <a href="#" id="sign-out-btn">Sign Out</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="main-content">
+            <h1>Welcome Back, <span id="user-name">[User's Name]</span>!</h1>
+            <p>What would you like to explore today?</p>
+            
+            <div class="card-grid">
+                <a href="CG_dashboard.html" class="card-link">
+                    <div class="card" id="college-guidance-card">
+                        <h3>College Guidance</h3>
+                        <p>Find nearby government colleges, eligibility criteria, and more.</p>
+                    </div>
+                </a>
+                
+                <a href="#" class="card-link">
+                    <div class="card" id="career-mapping-card">
+                        <h3>Career Mapping</h3>
+                        <p>Explore different career paths and visual roadmaps for your future.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="recent-recommendations">
+                <h2>Your Recent Recommendations</h2>
+                <div class="recommendation-list" id="recommendation-list">
+                    </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <span>CareerSetu Chatbot</span>
+                <span class="close-btn" id="close-chatbot">&times;</span>
+            </div>
+            <div class="chatbot-body" id="chatbot-body">
+                <div class="message bot-message">Hello! I'm here to help you. What's on your mind?</div>
+            </div>
+            <div class="chatbot-footer">
+                <input type="text" id="chatbot-input" placeholder="Type your message...">
+                <button id="chatbot-send-btn">Send</button>
+            </div>
+        </div>
+
+        <div class="chat-toggle-btn" id="chat-toggle-btn">
+            <p>💬</p>
+        </div>
+    </div>
+
+    <script src="dashboard-script.js"></script>
+</body>
+</html>

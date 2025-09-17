@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerSetu - Personalized Quiz</title>
+    <link rel="stylesheet" href="quiz-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Let's Discover Your Path!</h1>
+        <p>This quick quiz will help us understand your background and interests to give you the best recommendations.</p>
+        
+        <div class="question-box" id="question-1">
+            <p>1. What is your current or highest level of education?</p>
+            <div class="options">
+                <button data-question="edu-level" data-value="class-10">Class 10 (or equivalent)</button>
+                <button data-question="edu-level" data-value="class-12">Class 12 (or equivalent)</button>
+                <button data-question="edu-level" data-value="undergraduate">Undergraduate</button>
+                <button data-question="edu-level" data-value="post-graduate">Postgraduate</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-2">
+            <p>2. Which educational board did you study under (or are you currently studying under)?</p>
+            <div class="options">
+                <button data-question="edu-board" data-value="cbse">CBSE</button>
+                <button data-question="edu-board" data-value="icse">ICSE</button>
+                <button data-question="edu-board" data-value="state-board">State Board</button>
+                <button data-question="edu-board" data-value="nios">NIOS (National Institute of Open Schooling)</button>
+                <button data-question="edu-board" data-value="other">Other</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-3">
+            <p>3. Are you planning to appear for any competitive entrance exams?</p>
+            <div class="options yes-no">
+                <button data-question="competitive-exams" data-value="yes">Yes</button>
+                <button data-question="competitive-exams" data-value="no">No</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-4">
+            <p>4. If yes, which exams are you preparing for? (Select all that apply)</p>
+            <div class="options multiple-select">
+                <button data-question="specific-exams" data-value="jee">JEE (Main/Advanced)</button>
+                <button data-question="specific-exams" data-value="neet">NEET</button>
+                <button data-question="specific-exams" data-value="cuet">CUET (Common University Entrance Test)</button>
+                <button data-question="specific-exams" data-value="clat">CLAT (Common Law Admission Test)</button>
+                <button data-question="specific-exams" data-value="upsc">UPSC (Union Public Service Commission)</button>
+                <button data-question="specific-exams" data-value="cat">CAT/XAT (Management Exams)</button>
+                <button data-question="specific-exams" data-value="other-exam">Other</button>
+            </div>
+        </div>
+        
+        <div class="question-box hidden" id="question-5">
+            <p>5. What was your aggregate percentage or grade in your last major exam?</p>
+            <div class="options">
+                <button data-question="percentage" data-value="above-90">Above 90%</button>
+                <button data-question="percentage" data-value="80-90">80% - 90%</button>
+                <button data-question="percentage" data-value="70-80">70% - 80%</button>
+                <button data-question="percentage" data-value="60-70">60% - 70%</button>
+                <button data-question="percentage" data-value="below-60">Below 60%</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-6">
+            <p>6. Are you interested in pursuing higher education outside of India?</p>
+            <div class="options yes-no">
+                <button data-question="study-abroad" data-value="yes">Yes</button>
+                <button data-question="study-abroad" data-value="no">No</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-7">
+            <p>7. What subjects are you most passionate about? (Select up to 3)</p>
+            <div class="options multiple-select-limit">
+                <button data-question="favorite-subjects" data-value="physics">Physics</button>
+                <button data-question="favorite-subjects" data-value="chemistry">Chemistry</button>
+                <button data-question="favorite-subjects" data-value="biology">Biology</button>
+                <button data-question="favorite-subjects" data-value="math">Mathematics</button>
+                <button data-question="favorite-subjects" data-value="history">History</button>
+                <button data-question="favorite-subjects" data-value="political-science">Political Science</button>
+                <button data-question="favorite-subjects" data-value="economics">Economics</button>
+                <button data-question="favorite-subjects" data-value="accountancy">Accountancy</button>
+                <button data-question="favorite-subjects" data-value="computer-science">Computer Science</button>
+                <button data-question="favorite-subjects" data-value="literature">Literature</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-8">
+            <p>8. Do you prefer working with people or with data/machines?</p>
+            <div class="options">
+                <button data-question="work-type" data-value="people">Working with people</button>
+                <button data-question="work-type" data-value="data-machines">Working with data/machines</button>
+                <button data-question="work-type" data-value="both">A balance of both</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-9">
+            <p>9. Which of these activities do you enjoy most in your free time?</p>
+            <div class="options">
+                <button data-question="hobbies" data-value="reading-writing">Reading and writing</button>
+                <button data-question="hobbies" data-value="puzzles">Solving puzzles or logic games</button>
+                <button data-question="hobbies" data-value="creative">Creative activities like painting or music</button>
+                <button data-question="hobbies" data-value="sports">Participating in sports or outdoor activities</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-10">
+            <p>10. Do you prefer to work independently or as part of a team?</p>
+            <div class="options">
+                <button data-question="work-pref" data-value="independent">Independently</button>
+                <button data-question="work-pref" data-value="team">In a team</button>
+                <button data-question="work-pref" data-value="both">I am comfortable with both</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-11">
+            <p>11. Are you interested in a career that involves a lot of public speaking or presentations?</p>
+            <div class="options yes-no">
+                <button data-question="public-speaking" data-value="yes">Yes</button>
+                <button data-question="public-speaking" data-value="no">No</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-12">
+            <p>12. Do you consider yourself a creative or an analytical person?</p>
+            <div class="options">
+                <button data-question="personality" data-value="creative">Creative</button>
+                <button data-question="personality" data-value="analytical">Analytical</button>
+                <button data-question="personality" data-value="both">A combination of both</button>
+            </div>
+        </div>
+        
+        <div class="question-box hidden" id="question-13">
+            <p>13. What is your primary career goal?</p>
+            <div class="options">
+                <button data-question="career-goal" data-value="private-sector">Secure a high-paying job in the private sector</button>
+                <button data-question="career-goal" data-value="government-job">Work for a government organization (e.g., Civil Services)</button>
+                <button data-question="career-goal" data-value="entrepreneur">Start my own business or become an entrepreneur</button>
+                <button data-question="career-goal" data-value="creative-profession">Enter a creative or arts-based profession</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-14">
+            <p>14. What is your preferred work environment?</p>
+            <div class="options">
+                <button data-question="work-environment" data-value="office">Office environment</button>
+                <button data-question="work-environment" data-value="field-work">Field work (travel, on-site)</button>
+                <button data-question="work-environment" data-value="lab">Lab/research setting</button>
+                <button data-question="work-environment" data-value="social">Social/community setting</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-15">
+            <p>15. Are you open to relocating to a different city for your education or job?</p>
+            <div class="options yes-no">
+                <button data-question="relocation" data-value="yes">Yes</button>
+                <button data-question="relocation" data-value="no">No</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-16">
+            <p>16. What is your budget for higher education per year?</p>
+            <div class="options">
+                <button data-question="budget" data-value="low">Less than ₹50,000</button>
+                <button data-question="budget" data-value="mid-low">₹50,000 - ₹1,00,000</button>
+                <button data-question="budget" data-value="mid-high">₹1,00,000 - ₹5,00,000</button>
+                <button data-question="budget" data-value="high">More than ₹5,00,000</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-17">
+            <p>17. Are you interested in applying for scholarships?</p>
+            <div class="options yes-no">
+                <button data-question="scholarships" data-value="yes">Yes</button>
+                <button data-question="scholarships" data-value="no">No</button>
+            </div>
+        </div>
+        
+        <div class="question-box hidden" id="question-18">
+            <p>18. Do you have a specific career in mind?</p>
+            <div class="options yes-no">
+                <button data-question="specific-career" data-value="yes">Yes</button>
+                <button data-question="specific-career" data-value="no">No</button>
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-19">
+            <p>19. If yes, what is it? (e.g., Doctor, Engineer, Lawyer, etc.)</p>
+            <div class="input-group">
+                <input type="text" id="career-input" placeholder="Type your career here...">
+            </div>
+        </div>
+
+        <div class="question-box hidden" id="question-20">
+            <p>20. Would you prefer a traditional degree or a short-term skill-based course?</p>
+            <div class="options">
+                <button data-question="course-type" data-value="traditional">Traditional degree (B.A., B.Sc., B.Tech)</button>
+                <button data-question="course-type" data-value="skill-based">Short-term skill course</button>
+                <button data-question="course-type" data-value="both">Both</button>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-bar-fill"></div>
+        </div>
+        
+        <button id="next-button" class="cta-button">Next</button>
+        <button id="finish-button" class="cta-button hidden">Finish Quiz</button>
+    </div>
+
+    <script src="quiz-script.js"></script>
+</body>
+</html>

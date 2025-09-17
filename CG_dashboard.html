@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAREERSETU - Personalized Guidance</title>
+    <link rel="stylesheet" href="CG_dashboard-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>CAREERSETU</h1>
+        <p>Your AI-Powered Career Advisor</p>
+    </header>
+
+    <div class="main-container">
+
+        <section id="intro-section" class="active-step">
+            <div class="card intro-card">
+                <h2>Let's begin your college mapping journey!</h2>
+                <p>Discover the perfect colleges and courses tailored just for you. Get started by answering a few simple questions.</p>
+                <button id="start-quiz-btn" class="primary-btn">Let's Begin</button>
+            </div>
+        </section>
+
+        <section id="quiz-section" class="hidden-step">
+            <div class="card quiz-card">
+                <div id="quiz-container">
+                    </div>
+                <div class="quiz-nav">
+                    <button id="prev-btn" class="nav-btn hidden"><i class="fas fa-chevron-left"></i> Previous</button>
+                    <button id="next-btn" class="nav-btn">Next <i class="fas fa-chevron-right"></i></button>
+                    <button id="submit-btn" class="primary-btn hidden">Show My Results</button>
+                </div>
+                <div class="upload-container">
+                    <p>Prefer AI analysis?</p>
+                    <input type="file" id="marksheet-upload" class="hidden">
+                    <button id="upload-marksheet-btn" class="secondary-btn">Upload Marksheet</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="results-section" class="hidden-step">
+            <div class="results-card">
+                <div class="results-header">
+                    <h2>Here are your personalized recommendations!</h2>
+                    <p>Based on your quiz, these colleges are the perfect match for you. No need to filter further.</p>
+                </div>
+                <div class="college-list-area">
+                    <div id="college-container">
+                        </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="CG_dashboard-script.js"></script>
+</body>
+</html>
