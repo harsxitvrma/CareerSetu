@@ -25,7 +25,7 @@ Feature	Description	Screenshot (SS)
 
 Personalized Quiz	
 Guides new users through a series of questions to understand their interests and background.
-![CareerSetu Dashboard](assets/Screenshot 2025-09-18 113656.png)
+![CareerSetu Dashboard](assets/Screenshot_2025-09-18_113656.png)
 
 User Dashboard	The main hub for returning users with quick access to career mapping and college guidance.
 
