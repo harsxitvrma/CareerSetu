@@ -21,33 +21,13 @@ Admission & Scholarship Tracker: A smart calendar to remind students about impor
 
 Inclusive Platform: The system is adaptable for all school boards in India (ICSE, CBSE, State Boards).
 
-Feature	Description	Screenshot (SS)
-
-Personalized Quiz	
-Guides new users through a series of questions to understand their interests and background.
-![CareerSetu Dashboard](assets/Screenshot_2025-09-18_113656.png)
-
-User Dashboard	The main hub for returning users with quick access to career mapping and college guidance.
-
-SS - Dashboard
-Interactive Chatbot	
-A conversational interface that provides real-time advice.
-
-SS - Chatbot
-Profile Description	A user profile menu showing key insights gathered from the quiz.	SS - Profile Dropdown
-Recommendations	
-Displays personalized recommendations based on quiz answers and user input.
-
-SS - Recommendations
-
 💻 Technology Stack
 
-Frontend: HTML, CSS, JavaScript (for a lightweight, accessible PWA).
+1. Frontend: HTML, CSS, JavaScript (for a lightweight, accessible PWA).
 
+2. Backend (Mock for Prototype): The prototype simulates backend functionality using pure JavaScript and browser localStorage. The final product will use Python and Node.js for backend APIs.
 
-Backend (Mock for Prototype): The prototype simulates backend functionality using pure JavaScript and browser localStorage. The final product will use Python and Node.js for backend APIs.
-
-AI/ML: The prototype uses simple rule-based logic. The final product will use Scikit-learn and TensorFlow Lite for the recommendation engine and quiz analysis.
+3. AI/ML: The prototype uses simple rule-based logic. The final product will use Scikit-learn and TensorFlow Lite for the recommendation engine and quiz analysis.
 
 ⚙️ How to Run the Project
 This project is a static prototype and does not require a server setup.
@@ -56,17 +36,6 @@ Prerequisites
 A modern web browser (Google Chrome, Firefox, etc.)
 
 A code editor (VS Code, Sublime Text, etc.)
-
-Steps
-Clone the Repository:
-
-Bash
-
-git clone [https://github.com/harsxitvrma/CareerSetu]
-Navigate to the Project Directory:
-
-Bash
-cd CareerSetu
 
 Open the Project:
 
